@@ -28,6 +28,7 @@ coverage_greyed :  gives grey shading colours/alphas representative of the perce
 
 timeseries :  plots variables and their associated times, arguments are repeating so multiple tiles can be created in a single call.
 
+twogroup_stacked_bar :  plots a bar of a binned variable that is also stacked by a different grouping
 
 
 
