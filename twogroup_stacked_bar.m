@@ -1,6 +1,6 @@
-function [varargout] = twogroup_stacked_hist(var,bins,groups,opts,lgnd)
+function [varargout] = twogroup_stacked_bar(var,bins,groups,opts,lgnd)
 %
-% plt.twogroup_stacked_hist - plots a histogram of a binned variable that is also stacked by a different grouping
+% plt.twogroup_stacked_bar - plots a bar of a binned variable that is also stacked by a different grouping
 %
 % Inputs:
 %   var - data for binning
@@ -8,7 +8,7 @@ function [varargout] = twogroup_stacked_hist(var,bins,groups,opts,lgnd)
 %   groups - the groups from which to do the stacking (usually 1,2,3, etc)
 % -name-value arguments-
 %   'colors' - (required) a nx3 double of RBG triplets, 1 triplet for each group
-%   'percentages' - 'y' to plot the histogram as percentages (aka:'Normalisation','probability * 100)
+%   'percentages' - 'y' to plot the bars as percentages (aka:'Normalisation','probability * 100)
 %   'addtofig' - 'y' adds plot to an open figure as the next tile
 %   'xlabel' - xlabel string
 %   'lgtitle' - title for the legend
