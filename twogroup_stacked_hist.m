@@ -54,7 +54,9 @@ for i = 1:width(bins)-1
         b{i}(j).FaceColor = opts.colors(j,:);
     end
 end
-xlbs = sls.plt.binlabels(bins(1,:));
+xl = bins(1,:);
+xl(:,2) = [xl(2:end) ; string(double(xl(end,1)) + 1)];
+xlbs = append(xl(:,1),'-' ,xl(:,2));
 xlim([.5 length(b)+.5])
 xtick(1:length(xlbs)-1)
 xticklabels(xlbs(1:end-1))
