@@ -5,6 +5,7 @@ function varargout=fnames(directory,nv)
 % Inputs:
 %   directory - directory containing the files/folders
 % -name-value arguments-
+%   'contains' - (optional) string to filter the file names
 %   'erase' - (optional) string to erase from the file names
 %
 % Outputs (in order):
@@ -27,6 +28,9 @@ files(j) = [];
 id(j) = []; 
 folders = files(id);
 files(id) = [];
+if isfield(nv,'contains')
+    files = files(contains(files,nv.contains));
+end
 if isfield(nv,'erase')
     files = erase(files,nv.erase);
 end
