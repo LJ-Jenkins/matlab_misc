@@ -1,6 +1,6 @@
 function [varargout] = twogroup_stacked_bar(var,bins,groups,opts,lgnd)
 %
-% plt.twogroup_stacked_bar - plots a bar of a binned variable that is also stacked by a different grouping
+% twogroup_stacked_bar - plots a bar of a binned variable that is also stacked by a different grouping
 %
 % Inputs:
 %   var - data for binning
