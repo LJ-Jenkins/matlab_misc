@@ -29,16 +29,7 @@ arguments
 end
 
 if isfield(fig,'weight')
-    set(findobj(fig.object,'type','axes'),'fontweight','bold')
-    set(findobj(fig.object,'type','text'),'fontweight','bold')
-    if isgraphics(fig.object,'matlab.ui.Figure')
-        ax = fig.object().Children;
-        if isgraphics(ax,'matlab.graphics.layout.TiledChartLayout')
-            ax.Title.FontWeight = 'bold';
-            ax.XLabel.FontWeight = 'bold';
-            ax.YLabel.FontWeight = 'bold';
-        end
-    end
+    set(findall(fig.object,'Type','text'),'FontWeight','bold')
 end
 if nargin > 0
     fontsize(fig.object,varargin{:})
@@ -48,11 +39,3 @@ if isfield(fig,'name')
 end
 
 % fini
-
-% if isfield(fig,'size')
-%     if iscell(fig.size)
-%         fontsize(fig.object,fig.size{:})
-%     else
-%         fontsize(fig.object,fig.size)
-%     end
-% end
