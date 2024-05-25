@@ -123,7 +123,7 @@ function varargout = nxtile(varargin)
         newax = gobjects(gs);
         tempax = gobjects(size(ax));
         for j = 1:numel(ax)
-            tempax(j) = nexttile((tpos(j,1) - 1) * gs(2) + tpos(i,2));
+            tempax(j) = nexttile((tpos(j,1) - 1) * gs(2) + tpos(j,2));
             newax(j) = copyobj(ax(j),nf);
             set(newax(j), 'units', tempax(j).Units, 'Position', tempax(j).Position)
             tempax(j).Visible = 'off';
